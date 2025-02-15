@@ -1,0 +1,55 @@
+---
+const {
+  hidedetail = false,
+  title,
+  img,
+  desc,
+  url,
+  badge,
+  tags,
+  target = "_blank",
+} = Astro.props;
+import { Image } from "astro:assets";
+import oneGif from "~/assets/images/project/one.gif";
+
+---
+
+<div class="w-full">
+  <a href={url} target={target}>
+    <div
+      class="card border rounded-lg overflow-clip bg-base-100 transition-scale duration-300 shadow-md hover:shadow-xl hover:scale-105"
+    >
+      <div class="card-body">
+        
+        <video 
+          class="w-full rounded-lg aspect-video object-cover"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src="../assets/video/video_1.webm"} type="video/webm" />
+        </video>
+      <!-- <Image
+        class="w-full rounded-lg aspect-video object-cover"
+        format="webp"
+        src={oneGif}
+        alt={title}
+      /> -->
+      
+        <h2 class="card-title text-base">
+          {title}
+          <!-- {badge && <div class="badge badge-secondary">{badge}</div>} -->
+        </h2>
+        <p class="text-gray-500 dark:text-gray-400">{desc}</p>
+        <div class="card-actions justify-end">
+          {
+            tags &&
+              tags.map((tag) => <div class="badge badge-outline">{tag}</div>)
+          }
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+

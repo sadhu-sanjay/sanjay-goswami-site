@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const last_posts = posts.slice(0, 3);
+
+import proj1 from "~/assets/images/project/proj1.png";
+import proj2 from "~/assets/images/project/proj2.png";
+import proj3 from "~/assets/images/project/proj3.png";
+import proj4 from "~/assets/images/project/proj4.png";
+import proj5 from "~/assets/images/project/proj5.png";
+import proj6 from "~/assets/images/project/proj6.png";
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hello there 👋</div>
+    <div class="text-5xl font-bold">I'm Sanjay Goswami</div>
+    <div class="text-3xl py-3 font-bold">Sr. Software Engineer</div>
+    <div class="py-2">
+      <text class="text-lg">
+        Over the last 8 years I have build or oversaw the developement of around
+        50 enterprice level Software Projects . for mobile, web and IOT
+        platforms using technologies like html, css, python, javascript, swift,
+        kotlin, mysql, GCP, AWS. etc.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn btn-outline" href="https://twitter.com/sanjaygoswami60" target="_blank">
+        Let's connect!</a
+      >
+      <!-- <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
+        Get This template
+      </a> -->
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">My last projects</div>
+  </div>
+
+  <HorizontalCard
+    title="ArcadeVr - Arcade Software for VR Game Management Software."
+    img={proj6}
+    desc="https://www.upwork.com/freelancers/sanjayg19?p=1750125354851680256"
+    url="https://arcadevr.web.app"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Airmaps - Google Maps Records Visualization"
+    img={proj1}
+    desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
+    url="https://demo.sanjaygoswami.online"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Chicane Inc. Landing Page"
+    img={proj2}
+    desc="The Computer one is a CPU case built by Teenage engineering. This here is my interpretation of how I would make a landing page If I were to seel this product."
+    url="https://computer-one.web.app/"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Corbett National Safari Experience Booking website"
+    img={proj5}
+    desc="A Complete Tour booking website for Corbett National Park Safari"
+    url="https://shicane.web.app/"
+    badge=""
+  />
+
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Itne Incorporated Business Dashboard"
+    img={proj3}
+    desc="A Custom Dashboard and saas work demo for Itne Inc. showcasing all Features that can be implemented on a fullstack app. From listing to creating to sending for approval to approving. "
+    url="https://dynamic-table-xi.vercel.app/"
+    badge=""
+  />
+
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Dashboard Fresh Order - Build and Buy Custom Tshirts "
+    img={proj4}
+    desc="This was a landing page plus website i built for a Tshirt and clothing compnay. on this website you can customize and order your own custom design tshirts. This also includes a custom Tshirt Builder Built using konva."
+    url="https://freshorder.web.app"
+    badge=""
+  />
+
+  <!-- <HorizontalCard
+    title="Tripkart - Ecommerece Website"
+    img={proj5}
+    desc="A startup for an ecommerece project"
+    url="https://shicane.web.app/"
+    badge=""
+  /> -->
+
+  <!-- <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  } -->
+</BaseLayout>

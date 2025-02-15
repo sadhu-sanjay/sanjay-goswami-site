@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import Card from "../components/Card.astro";
+import proj5 from "~/assets/images/project/proj5.png";
+import proj1 from "~/assets/images/project/proj1.png";
+---
+
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Recent Work</div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
+  </div>
+
+  <!--Give me a grid with 3 items horizontalls 2 items in tablet and 1 items in mobile.  -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
+    <Card
+      title="ArcadeVr - Arcade Software for VR Game Management Software."
+      img={proj5}
+      desc="https://www.upwork.com/freelancers/sanjayg19?p=1750125354851680256"
+      url="https://arcadevr.web.app"
+      badge="NEW"
+      hidedetail={true}
+    />
+
+    <Card
+      title="Airmaps - Google Maps Records Visualization"
+      img={proj1}
+      desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
+      url="https://demo.sanjaygoswami.online"
+      badge="NEW"
+    />
+
+    <div class="divider my-0"></div>
+  </div>
+</BaseLayout>
