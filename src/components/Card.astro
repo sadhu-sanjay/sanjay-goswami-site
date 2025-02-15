@@ -10,37 +10,31 @@ const {
   target = "_blank",
 } = Astro.props;
 
-import video_1 from "~/assets/videos/video_1.webm"; // Or .webm, .ogv, etc.
-
-// 
-
+import video1 from "~/assets/videos/video1.webm"; // Or .webm, .ogv, etc.
 ---
 
 <div class="w-full">
   <a href={url} target={target}>
     <div
-      class="card border rounded-lg overflow-clip bg-base-100 transition-scale duration-300 shadow-xl hover:shadow-xl hover:scale-105"
+      class="card border rounded-lg overflow-clip bg-base-100 transition-scale duration-300 shadow-lg hover:shadow-xl hover:scale-105"
     >
-    <video 
-          class="shadow-xl rounded-lg aspect-video object-cover"
-          autoplay
-          muted
-          loop
-          width="320px"
-        >
-          <source src={video_1} type="video/webm" />
-        </video>
-      <!-- <div class="card-body"> -->
-        
-        
-      <!-- <Image
+      
+      <div class="card-body">
+        <!-- <Image
         class="w-full rounded-lg aspect-video object-cover"
         format="webp"
         src={oneGif}
         alt={title}
       /> -->
-      
-        <!-- <h2 class="card-title text-base">
+<video
+        class="w-full mb-6 shadow-xl rounded-lg aspect-video object-cover"
+        autoplay
+        muted
+        loop
+      >
+        <source src={video1} type="video/webm" />
+      </video>
+        <h2 class="card-title text-base">
           {title}
           {badge && <div class="badge badge-secondary">{badge}</div>}
         </h2>
@@ -50,9 +44,8 @@ import video_1 from "~/assets/videos/video_1.webm"; // Or .webm, .ogv, etc.
             tags &&
               tags.map((tag) => <div class="badge badge-outline">{tag}</div>)
           }
-        </div> -->
-      <!-- </div> -->
+        </div>
+      </div>
     </div>
   </a>
 </div>
-

@@ -4,6 +4,8 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import Card from "../components/Card.astro";
 import proj5 from "~/assets/images/project/proj5.png";
 import proj1 from "~/assets/images/project/proj1.png";
+
+import video1 from "~/assets/videos/video1.webm";
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
@@ -18,15 +20,15 @@ import proj1 from "~/assets/images/project/proj1.png";
   <!--Give me a grid with 3 items horizontalls 2 items in tablet and 1 items in mobile.  -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
     <Card
-      title="ArcadeVr - Arcade Software for VR Game Management Software."
+      title="Fluid Simulation"
       img={proj5}
-      desc="https://www.upwork.com/freelancers/sanjayg19?p=1750125354851680256"
+      desc="You are missing a valid license for Gemini Code Assist and may lose access to the service. Contact your billing administrator to purchase or assign a license.  "
       url="https://fluid-sim.web.app"
       badge="NEW"
       hidedetail={true}
     />
-
-    <!-- <Card
+    
+  <!-- <Card
       title="Airmaps - Google Maps Records Visualization"
       img={proj1}
       desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
@@ -34,6 +36,5 @@ import proj1 from "~/assets/images/project/proj1.png";
       badge="NEW"
     /> -->
 
-    <div class="divider my-0"></div>
-  </div>
+  <div class="divider my-0"></div>
 </BaseLayout>
