@@ -2,6 +2,7 @@
 const {
   title,
   img,
+  video,
   desc,
   url,
   badge,
@@ -9,7 +10,6 @@ const {
   target = "_blank",
 } = Astro.props;
 
-import video1 from "~/assets/videos/video1.mp4"; // Or .webm, .ogv, etc.
 ---
 
 <div class="w-full">
@@ -31,7 +31,7 @@ import video1 from "~/assets/videos/video1.mp4"; // Or .webm, .ogv, etc.
         muted
         loop
       >
-        <source src={video1} type="video/mp4" />
+        <source src={video} type="video/mp4" />
       </video>
         <h2 class="card-title text-base">
           {title}
