@@ -3,92 +3,136 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BaseTabLayout from "../layouts/BaseTabLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import Card from "../components/Card.astro";
+
+import proj3 from "~/assets/images/project/proj3.png"
+import proj4 from "~/assets/images/project/proj4.png"
 import proj5 from "~/assets/images/project/proj5.png";
+import proj6 from "~/assets/images/project/proj6.png";
 import proj1 from "~/assets/images/project/proj1.png";
 
 import video1 from "~/assets/videos/video1.mp4";
+import video2 from "~/assets/videos/comp1.mp4";
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
+  <div role="tablist" class="tabs tabs-lg tabs-lifted tabs-bordered">
+    <input
+      type="radio"
+      name="my_tabs_2"
+      role="tab"
+      class="tab"
+      aria-label="Frontend"
+      checked="checked"
+    />
+    <div
+      role="tabpanel"
+      class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+    >
+        <Card
+          title="Smoke simulation"
+          video={video1}
+          desc="Animation done for a online canabis store loading screen. The animation using pure css and javascript"
+          url="https://fluid-sim.web.app"
+          badge="NEW"
+          tags={["CSS", "JS", "Animation"]}
+        />
 
-  <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-        <li class="me-2" role="presentation">
-            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-        </li>
-        <li class="me-2" role="presentation">
-            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Dashboard</button>
-        </li>
-        <li class="me-2" role="presentation">
-            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
-        </li>
-        <li role="presentation">
-            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
-        </li>
-    </ul>
-</div>
-<div id="default-tab-content">
-    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
-  <Card
-    title="Smoke simulation"
-    video={video1}
-    desc="Animation done for a online canabis store loading screen. The animation using pure css and javascript"
-    url="https://fluid-sim.web.app"
-    badge="NEW"
-    tags={["CSS", "JS", "Animation"]}
-  />
-</div>
-        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+        <Card
+          title="Chicane Inc. Landing Page"
+          video={video2}
+          desc="The Computer one is a CPU case built by Teenage engineering. This here is my interpretation of how I would make a landing page If I were to seel this product."
+          url="https://computer-one.web.app/"
+          badge="NEW"
+          tags={["React", "Tailwind", "Next.js"]}
+        />
+
+        <Card
+          title="ArcadeVr - Arcade Software for VR Game Management Software."
+          img={proj6}
+          desc="Front-end  app for an Arcade VR setup. this app run's on a pc which connects to a vr headset. essential this is a font-end UI which helps user selects game while wearing VR headset"
+          url="https://arcadevr.web.app"
+          badge="NEW"
+        />
+
+        <Card
+          title="Corbett National Safari Experience Booking website"
+          img={proj5}
+          desc="A Complete Tour booking website for Corbett National Park Safari"
+          url="https://shicane.web.app/"
+          badge=""
+        />
     </div>
-    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+
+    <input
+      type="radio"
+      name="my_tabs_2"
+      role="tab"
+      class="tab"
+      aria-label="FullStack"
+    />
+    <div
+      role="tabpanel"
+      class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+    >
+      <Card
+        title="Airmaps - Google Maps Records Visualization"
+        img={proj1}
+        desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
+        url="https://demo.sanjaygoswami.online"
+        badge="NEW"
+      />
+
+      <Card
+        title="Itne Incorporated Business Dashboard"
+        img={proj3}
+        desc="A Custom Dashboard and saas work demo for Itne Inc. showcasing all Features that can be implemented on a fullstack app. From listing to creating to sending for approval to approving. "
+        url="https://dynamic-table-xi.vercel.app/"
+        badge="NEW"
+      />
+
+      <Card
+        title="Dashboard Fresh Order - Build and Buy Custom Tshirts "
+        img={proj4}
+        desc="This was a landing page plus website i built for a Tshirt and clothing compnay. on this website you can customize and order your own custom design tshirts. This also includes a custom Tshirt Builder Built using konva."
+        url="https://freshorder.web.app"
+        badge=""
+      />
+      <div class="divider my-0"></div>
     </div>
-    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+
+    <input
+      type="radio"
+      name="my_tabs_2"
+      role="tab"
+      class="tab"
+      aria-label="Mobile"
+    />
+    <div
+      role="tabpanel"
+      class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+    >
+      Tab content 3
     </div>
-    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+
+    <input
+      type="radio"
+      name="my_tabs_2"
+      role="tab"
+      class="tab"
+      aria-label="Hardware"
+    />
+    <div
+      role="tabpanel"
+      class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+    >
+      Tab content 3
     </div>
-</div>
+  </div>
+
+  
   
 </BaseLayout>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('[data-tabs-target]');
-    const tabContents = document.querySelectorAll('[role="tabpanel"]');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.tabsTarget);
-
-        tabContents.forEach(tc => {
-          tc.classList.add('hidden');
-        });
-
-        tabs.forEach(t => {
-          t.classList.remove('border-blue-500', 'text-blue-600');
-          t.classList.add('hover:text-gray-600', 'hover:border-gray-300', 'dark:hover:text-gray-300');
-        });
-
-        target.classList.remove('hidden');
-        tab.classList.add('border-blue-500', 'text-blue-600');
-        tab.classList.remove('hover:text-gray-600', 'hover:border-gray-300', 'dark:hover:text-gray-300');
-      });
-    });
-  });
 
 
-</script>
 
-<!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
-  <Card
-    title="Smoke simulation"
-    video={video1}
-    desc="Animation done for a online canabis store loading screen. The animation using pure css and javascript"
-    url="https://fluid-sim.web.app"
-    badge="NEW"
-    tags={["CSS", "JS", "Animation"]}
-  />
-</div> -->

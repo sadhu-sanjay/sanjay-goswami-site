@@ -18,8 +18,10 @@ import proj5 from "~/assets/images/project/proj5.png";
 import proj6 from "~/assets/images/project/proj6.png";
 
 import video1 from "~/assets/videos/video1.mp4";
-import comp1 from "~/assets/videos/comp1.mp4";
+import video2 from "~/assets/videos/comp1.mp4";
+
 import Card from "@components/Card.astro";
+
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -43,9 +45,9 @@ import Card from "@components/Card.astro";
       >
         Let's connect!</a
       >
-      <!-- <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a> -->
+      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
+        Set up a meeting 
+      </a>
     </div>
   </div>
 
@@ -74,7 +76,7 @@ import Card from "@components/Card.astro";
 
         <Card
           title="Chicane Inc. Landing Page"
-          video={comp1}
+          video={video2}
           desc="The Computer one is a CPU case built by Teenage engineering. This here is my interpretation of how I would make a landing page If I were to seel this product."
           url="https://computer-one.web.app/"
           badge="NEW"
@@ -110,7 +112,9 @@ import Card from "@components/Card.astro";
       role="tabpanel"
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
-      <HorizontalCard
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
+      <Card
         title="Airmaps - Google Maps Records Visualization"
         img={proj1}
         desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
@@ -118,23 +122,23 @@ import Card from "@components/Card.astro";
         badge="NEW"
       />
 
-      <HorizontalCard
+      <Card
         title="Itne Incorporated Business Dashboard"
         img={proj3}
         desc="A Custom Dashboard and saas work demo for Itne Inc. showcasing all Features that can be implemented on a fullstack app. From listing to creating to sending for approval to approving. "
         url="https://dynamic-table-xi.vercel.app/"
         badge="NEW"
       />
-      <div class="divider my-0"></div>
 
-      <HorizontalCard
+      <Card
         title="Dashboard Fresh Order - Build and Buy Custom Tshirts "
         img={proj4}
         desc="This was a landing page plus website i built for a Tshirt and clothing compnay. on this website you can customize and order your own custom design tshirts. This also includes a custom Tshirt Builder Built using konva."
         url="https://freshorder.web.app"
         badge=""
       />
-      <div class="divider my-0"></div>
+        </div>
+
     </div>
 
     <input
