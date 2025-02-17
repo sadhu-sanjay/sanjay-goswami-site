@@ -9,10 +9,11 @@ import video1 from "~/assets/videos/video1.mp4";
 import video2 from "~/assets/videos/comp1.mp4";
 import video3 from "~/assets/videos/rally.mp4";
 import video4 from "~/assets/videos/airmaps.mp4";
+import srh from "~/assets/videos/srh.mp4";
+import srhM from "~/assets/videos/srh-m.mp4";
 ---
 
-
-<div role="tablist" class="tabs tabs-lg tabs-lifted tabs-bordered">
+<div role="tablist" class="tabs tabs-lg  tabs-lifted  ">
     <input
       type="radio"
       name="my_tabs_2"
@@ -26,6 +27,7 @@ import video4 from "~/assets/videos/airmaps.mp4";
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
+
         <Card
           title="Smoke simulation"
           video={video1}
@@ -34,6 +36,16 @@ import video4 from "~/assets/videos/airmaps.mp4";
           badge="NEW"
           tags={["CSS", "JS", "Animation"]}
         />
+
+        <Card
+          title="SRH | Expert Strategies in Empirical Marketing and Media" 
+          video={srh}
+          desc="A complete website for a marketing agency. This website is built using GSAP and Tailwind CSS. The website is fully responsive and has a lot of animations."
+          url="https://srh-agency.web.app"
+          badge="NEW"
+          tags={["CSS", "JS", "GSAP", "Tailwind"]}
+        />
+
 
         <Card
           title="Chicane Inc. Landing Page"
@@ -111,6 +123,16 @@ import video4 from "~/assets/videos/airmaps.mp4";
       role="tabpanel"
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
+
+        <Card
+          title="SRH | Expert Strategies in Empirical Marketing and Media" 
+          video={srhM}
+          desc="A complete website for a marketing agency. This website is built using GSAP and Tailwind CSS. The website is fully responsive and has a lot of animations."
+          url="https://srh-agency.web.app"
+          badge="NEW"
+          tags={["CSS", "JS", "GSAP", "Tailwind"]}
+          orientation="vertical"
+        />
       Coming soon...
     </div>
 
