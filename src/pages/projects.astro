@@ -12,10 +12,13 @@ import proj1 from "~/assets/images/project/proj1.png";
 
 import video1 from "~/assets/videos/video1.mp4";
 import video2 from "~/assets/videos/comp1.mp4";
+import video3 from "~/assets/videos/rally.mp4";
+import video4 from "~/assets/videos/airmaps.mp4";
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
-  <div role="tablist" class="tabs tabs-lg tabs-lifted tabs-bordered">
+
+<div role="tablist" class="tabs tabs-lg tabs-lifted tabs-bordered">
     <input
       type="radio"
       name="my_tabs_2"
@@ -28,6 +31,7 @@ import video2 from "~/assets/videos/comp1.mp4";
       role="tabpanel"
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
         <Card
           title="Smoke simulation"
           video={video1}
@@ -48,7 +52,7 @@ import video2 from "~/assets/videos/comp1.mp4";
 
         <Card
           title="ArcadeVr - Arcade Software for VR Game Management Software."
-          img={proj6}
+          video={video3}
           desc="Front-end  app for an Arcade VR setup. this app run's on a pc which connects to a vr headset. essential this is a font-end UI which helps user selects game while wearing VR headset"
           url="https://arcadevr.web.app"
           badge="NEW"
@@ -61,6 +65,7 @@ import video2 from "~/assets/videos/comp1.mp4";
           url="https://shicane.web.app/"
           badge=""
         />
+      </div>
     </div>
 
     <input
@@ -74,30 +79,31 @@ import video2 from "~/assets/videos/comp1.mp4";
       role="tabpanel"
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
-      <Card
-        title="Airmaps - Google Maps Records Visualization"
-        img={proj1}
-        desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
-        url="https://demo.sanjaygoswami.online"
-        badge="NEW"
-      />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
+        <Card
+          title="Airmaps - Google Maps Records Visualization"
+          video={video4}
+          desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
+          url="https://travel.lbd.ventures"
+          badge="NEW"
+        />
 
-      <Card
-        title="Itne Incorporated Business Dashboard"
-        img={proj3}
-        desc="A Custom Dashboard and saas work demo for Itne Inc. showcasing all Features that can be implemented on a fullstack app. From listing to creating to sending for approval to approving. "
-        url="https://dynamic-table-xi.vercel.app/"
-        badge="NEW"
-      />
+        <Card
+          title="Itne Incorporated Business Dashboard"
+          img={proj3}
+          desc="A Custom Dashboard and saas work demo for Itne Inc. showcasing all Features that can be implemented on a fullstack app. From listing to creating to sending for approval to approving. "
+          url="https://dynamic-table-xi.vercel.app/"
+          badge="NEW"
+        />
 
-      <Card
-        title="Dashboard Fresh Order - Build and Buy Custom Tshirts "
-        img={proj4}
-        desc="This was a landing page plus website i built for a Tshirt and clothing compnay. on this website you can customize and order your own custom design tshirts. This also includes a custom Tshirt Builder Built using konva."
-        url="https://freshorder.web.app"
-        badge=""
-      />
-      <div class="divider my-0"></div>
+        <Card
+          title="Dashboard Fresh Order - Build and Buy Custom Tshirts "
+          img={proj4}
+          desc="This was a landing page plus website i built for a Tshirt and clothing compnay. on this website you can customize and order your own custom design tshirts. This also includes a custom Tshirt Builder Built using konva."
+          url="https://freshorder.web.app"
+          badge=""
+        />
+      </div>
     </div>
 
     <input
@@ -128,6 +134,8 @@ import video2 from "~/assets/videos/comp1.mp4";
       Tab content 3
     </div>
   </div>
+
+  
 
   
   

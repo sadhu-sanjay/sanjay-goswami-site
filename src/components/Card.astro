@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
 const {
   title,
   img,
@@ -12,28 +12,36 @@ const {
 } = Astro.props;
 ---
 
-<div class="w-full">
+<div class="w-full hover">
   <a href={url} target={target}>
     <div
       class="card border rounded-lg overflow-clip bg-base-100 transition-scale duration-300 shadow-lg hover:shadow-xl hover:scale-105"
     >
       <div class="card-body">
+        {
+          img && (
+            <Image
+              class="w-full rounded-lg aspect-video object-cover"
+              format="webp"
+              src={img}
+              alt={title}
+            />
+          )
+        }
 
-        {img && <Image
-        class="w-full rounded-lg aspect-video object-cover"
-        format="webp"
-        src={img}
-        alt={title}
-      />}
-
-        {video && <video
-          class="w-full mb-6 shadow-xl rounded-lg aspect-video object-cover"
-          autoplay
-          muted
-          loop
-        >
-          <source src={video} type="video/mp4" />
-        </video> }
+        {
+          video && (
+            <video
+              id="video"
+              class="card-video w-full mb-6 shadow-xl rounded-lg " 
+              autoplay
+              muted
+              loop
+            >
+              <source src={video} type="video/mp4" />
+            </video>
+          )
+        }
         <h2 class="card-title text-base">
           {title}
           {badge && <div class="badge badge-secondary">{badge}</div>}
@@ -49,3 +57,17 @@ const {
     </div>
   </a>
 </div>
+
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+      const video = card.querySelector(".card-video") as HTMLVideoElement;
+
+      card.addEventListener("mouseenter", () => {
+        video.play();
+      });
+    });
+  });
+</script> -->
