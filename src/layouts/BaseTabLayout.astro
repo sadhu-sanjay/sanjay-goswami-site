@@ -12,6 +12,9 @@ import video4 from "~/assets/videos/airmaps.mp4";
 import srh from "~/assets/videos/srh.mp4";
 import srhM from "~/assets/videos/srh-m.mp4";
 import medico from "~/assets/videos/medico.mp4";
+
+const { mdColCount = 2, lgColCount = 3 } = Astro.props;
+
 ---
 
 <div role="tablist" class="tabs tabs-lg  tabs-lifted  ">
@@ -27,7 +30,7 @@ import medico from "~/assets/videos/medico.mp4";
       role="tabpanel"
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
+      <div class={`grid grid-cols-1 md:grid-cols-${mdColCount} gap-12 lg:grid-cols-${lgColCount} `}>
 
         <Card
           title="Smoke simulation"
@@ -55,8 +58,6 @@ import medico from "~/assets/videos/medico.mp4";
           badge="NEW"
           tags={["CSS", "JS", "GSAP", "Tailwind"]}
         />
-
-
 
         <Card
           title="Chicane Inc. Landing Page"
@@ -96,7 +97,7 @@ import medico from "~/assets/videos/medico.mp4";
       role="tabpanel"
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3">
+      <div class={` grid grid-cols-1 md:grid-cols-${mdColCount} gap-12 lg:grid-cols-${lgColCount} `}>
         <Card
           title="Airmaps - Google Maps Records Visualization"
           video={video4}
