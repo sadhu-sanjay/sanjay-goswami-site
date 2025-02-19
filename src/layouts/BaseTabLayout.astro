@@ -13,11 +13,12 @@ import srh from "~/assets/videos/srh.mp4";
 import srhM from "~/assets/videos/srh-m.mp4";
 import medico from "~/assets/videos/medico.mp4";
 
+
 const { mdColCount = 2, lgColCount = 3 } = Astro.props;
 
 ---
 
-<div role="tablist" class="tabs tabs-lg  tabs-lifted  ">
+<div   role="tablist" class="tabs tabs-lg  tabs-lifted  ">
     <input
       type="radio"
       name="my_tabs_2"
@@ -30,7 +31,7 @@ const { mdColCount = 2, lgColCount = 3 } = Astro.props;
       role="tabpanel"
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
-      <div class={`grid grid-cols-1 md:grid-cols-${mdColCount} gap-12 lg:grid-cols-${lgColCount} `}>
+      <div class={`grid grid-cols-1 ${mdColCount > 1 ? 'md:grid-cols-2': 'md:grid-cols-1'} gap-12 ${lgColCount > 1 ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} `}>
 
         <Card
           title="Smoke simulation"
@@ -97,7 +98,8 @@ const { mdColCount = 2, lgColCount = 3 } = Astro.props;
       role="tabpanel"
       class="tab-content bg-base-100 border-base-300 rounded-box p-6"
     >
-      <div class={` grid grid-cols-1 md:grid-cols-${mdColCount} gap-12 lg:grid-cols-${lgColCount} `}>
+
+      <div class={`grid grid-cols-1 ${mdColCount > 1 ? 'md:grid-cols-2': 'md:grid-cols-1'} gap-12 ${lgColCount > 1 ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} `}>
         <Card
           title="Airmaps - Google Maps Records Visualization"
           video={video4}
