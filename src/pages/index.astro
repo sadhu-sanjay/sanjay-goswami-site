@@ -10,8 +10,6 @@ const posts = (await getCollection("blog")).sort(
 );
 
 const last_posts = posts.slice(0, 3);
-
-
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -30,7 +28,7 @@ const last_posts = posts.slice(0, 3);
 
     <div class="mt-8">
       <a
-        class="btn btn-outline "
+        class="btn btn-outline"
         href="https://twitter.com/sanjaygoswami60"
         target="_blank"
       >
@@ -44,13 +42,12 @@ const last_posts = posts.slice(0, 3);
       >
         Set up a meeting
       </a> -->
-
     </div>
   </div>
 
- <BaseTabLayout mdColCount={2} lgColCount={3} />
+  <BaseTabLayout mdColCount={2} lgColCount={3} />
 
-<!-- 
+  <!-- 
   {
     last_posts.map((post) => (
       <>
@@ -66,5 +63,4 @@ const last_posts = posts.slice(0, 3);
       </>
     ))
   } -->
-
 </BaseLayout>
