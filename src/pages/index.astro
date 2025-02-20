@@ -11,19 +11,7 @@ const posts = (await getCollection("blog")).sort(
 
 const last_posts = posts.slice(0, 3);
 
-import proj1 from "~/assets/images/project/proj1.png";
-import proj2 from "~/assets/images/project/proj2.png";
-import proj3 from "~/assets/images/project/proj3.png";
-import proj4 from "~/assets/images/project/proj4.png";
-import proj5 from "~/assets/images/project/proj5.png";
-import proj6 from "~/assets/images/project/proj6.png";
 
-import video1 from "~/assets/videos/video1.mp4";
-import video2 from "~/assets/videos/comp1.mp4";
-import video3 from "~/assets/videos/rally.mp4";
-import video4 from "~/assets/videos/airmaps.mp4";
-
-import Card from "@components/Card.astro";
 ---
 
 <BaseLayout sideBarActiveItemID="home">
