@@ -13,149 +13,148 @@ import srh from "~/assets/videos/srh.mp4";
 import srhM from "~/assets/videos/srh-m.mp4";
 import medico from "~/assets/videos/medico.mp4";
 
-
-const { mdColCount = 2, lgColCount = 3 } = Astro.props;
-
+const { mdColCount, lgColCount} = Astro.props;
 ---
 
-<div   role="tablist" class="tabs tabs-lg  tabs-lifted  ">
-    <input
-      type="radio"
-      name="my_tabs_2"
-      role="tab"
-      class="tab"
-      aria-label="Frontend"
-      checked="checked"
-    />
+<div role="tablist" class="tabs tabs-lg tabs-lifted">
+  <input
+    type="radio"
+    name="my_tabs_2"
+    role="tab"
+    class="tab"
+    aria-label="Frontend"
+    checked="checked"
+  />
+  <div
+    role="tabpanel"
+    class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+  >
     <div
-      role="tabpanel"
-      class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+      class={`grid grid-cols-1 ${mdColCount > 1 ? "md:grid-cols-3" : "md:grid-cols-1"} gap-12 ${lgColCount > 1 ? "lg:grid-cols-4" : "lg:grid-cols-1"} `}
     >
-      <div class={`grid grid-cols-1 ${mdColCount > 1 ? 'md:grid-cols-2': 'md:grid-cols-1'} gap-12 ${lgColCount > 1 ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} `}>
+      <Card
+        title="Cannabis Store Landing Page"
+        video={video1}
+        desc="Online canabis store landing page .The animation using pure html, css, javascript and webGL"
+        url="https://fluid-sim.web.app"
+        badge="NEW"
+        tags={["html", "CSS", "JS", "Animation", "WebGl"]}
+      />
 
-        <Card
-          title="Cannabis Store Landing Page"
-          video={video1}
-          desc="Online canabis store landing page .The animation using pure html, css, javascript and webGL"
-          url="https://fluid-sim.web.app"
-          badge="NEW"
-          tags={["html", "CSS", "JS", "Animation", "WebGl"]}
-        />
+      <Card
+        title="SRH | Expert Strategies in Empirical Marketing and Media"
+        video={srh}
+        desc="A complete website for a marketing agency. This website is built using GSAP and Tailwind CSS. The website is fully responsive and has a lot of animations."
+        url="https://srh-agency.web.app"
+        badge="NEW"
+        tags={["html", "CSS", "JS", "GSAP", "Tailwind"]}
+      />
 
-        <Card
-          title="SRH | Expert Strategies in Empirical Marketing and Media" 
-          video={srh}
-          desc="A complete website for a marketing agency. This website is built using GSAP and Tailwind CSS. The website is fully responsive and has a lot of animations."
-          url="https://srh-agency.web.app"
-          badge="NEW"
-          tags={["html", "CSS", "JS", "GSAP", "Tailwind"]}
-        />
-
-        <Card
-          title="Medico | Medical one "
-          video={medico}
-          desc="A complete website for a medical insurace service. This website is built using GSAP and Tailwind CSS. The website is fully responsive and has a lot of animations."
+      <Card
+        title="Medico | Medical one "
+        video={medico}
+        desc="A complete website for a medical insurace service. This website is built using GSAP and Tailwind CSS. The website is fully responsive and has a lot of animations."
         url="https://medical-one.web.app"
-          badge="NEW"
-          tags={["CSS", "JS", "GSAP", "Tailwind"]}
-        />
+        badge="NEW"
+        tags={["CSS", "JS", "GSAP", "Tailwind"]}
+      />
 
-        <Card
-          title="Chicane Inc. Landing Page"
-          video={video2}
-          desc="The Computer one is a CPU case built by Teenage engineering. This here is my interpretation of how I would make a landing page If I were to seel this product."
-          url="https://computer-one.web.app/"
-          badge=""
-          tags={["React", "Tailwind", "Next.js"]}
-        />
+      <Card
+        title="Chicane Inc. Landing Page"
+        video={video2}
+        desc="The Computer one is a CPU case built by Teenage engineering. This here is my interpretation of how I would make a landing page If I were to seel this product."
+        url="https://computer-one.web.app/"
+        badge=""
+        tags={["React", "Tailwind", "Next.js"]}
+      />
 
-        <Card
-          title="ArcadeVr - Arcade Software for VR Game Management Software."
-          video={video3}
-          desc="Front-end  app for an Arcade VR setup. this app run's on a pc which connects to a vr headset. essential this is a font-end UI which helps user selects game while wearing VR headset"
-          url="https://arcadevr.web.app"
-          badge=""
-        />
+      <Card
+        title="ArcadeVr - Arcade Software for VR Game Management Software."
+        video={video3}
+        desc="Front-end  app for an Arcade VR setup. this app run's on a pc which connects to a vr headset. essential this is a font-end UI which helps user selects game while wearing VR headset"
+        url="https://arcadevr.web.app"
+        badge=""
+      />
 
-        <Card
-          title="Corbett National Safari Experience Booking website"
-          img={proj5}
-          desc="A Complete Tour booking website for Corbett National Park Safari"
-          url="https://shicane.web.app/"
-          badge=""
-        />
-      </div>
-    </div>
-
-    <input
-      type="radio"
-      name="my_tabs_2"
-      role="tab"
-      class="tab"
-      aria-label="FullStack"
-    />
-    <div
-      role="tabpanel"
-      class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-    >
-
-      <div class={`grid grid-cols-1 ${mdColCount > 1 ? 'md:grid-cols-2': 'md:grid-cols-1'} gap-12 ${lgColCount > 1 ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} `}>
-        <Card
-          title="Airmaps - Google Maps Records Visualization"
-          video={video4}
-          desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
-          url="https://travel.lbd.ventures"
-          badge="NEW"
-        />
-
-        <Card
-          title="Itne Incorporated Business Dashboard"
-          img={proj3}
-          desc="A Custom Dashboard and saas work demo for Itne Inc. showcasing all Features that can be implemented on a fullstack app. From listing to creating to sending for approval to approving. "
-          url="https://dynamic-table-xi.vercel.app/"
-          badge="NEW"
-        />
-
-        <Card
-          title="Dashboard Fresh Order - Build and Buy Custom Tshirts "
-          img={proj4}
-          desc="This was a landing page plus website i built for a Tshirt and clothing compnay. on this website you can customize and order your own custom design tshirts. This also includes a custom Tshirt Builder Built using konva."
-          url="https://freshorder.web.app"
-          badge=""
-        />
-      </div>
-    </div>
-
-    <input
-      type="radio"
-      name="my_tabs_2"
-      role="tab"
-      class="tab"
-      aria-label="Mobile"
-    />
-    <div
-      role="tabpanel"
-      class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-    >
-
-        <Card
-          video={srhM}
-          url="https://srh-agency.web.app"
-          orientation="vertical"
-        />
-    </div>
-
-    <input
-      type="radio"
-      name="my_tabs_2"
-      role="tab"
-      class="tab"
-      aria-label="Hardware"
-    />
-    <div
-      role="tabpanel"
-      class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-    >
-      Coming soon...
+      <Card
+        title="Corbett National Safari Experience Booking website"
+        img={proj5}
+        desc="A Complete Tour booking website for Corbett National Park Safari"
+        url="https://shicane.web.app/"
+        badge=""
+      />
     </div>
   </div>
+
+  <input
+    type="radio"
+    name="my_tabs_2"
+    role="tab"
+    class="tab"
+    aria-label="FullStack"
+  />
+  <div
+    role="tabpanel"
+    class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+  >
+    <div
+      class={`grid grid-cols-1 ${mdColCount > 1 ? "md:grid-cols-2" : "md:grid-cols-1"} gap-12 ${lgColCount > 1 ? "lg:grid-cols-3" : "lg:grid-cols-1"} `}
+    >
+      <Card
+        title="Airmaps - Google Maps Records Visualization"
+        video={video4}
+        desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
+        url="https://travel.lbd.ventures"
+        badge="NEW"
+      />
+
+      <Card
+        title="Itne Incorporated Business Dashboard"
+        img={proj3}
+        desc="A Custom Dashboard and saas work demo for Itne Inc. showcasing all Features that can be implemented on a fullstack app. From listing to creating to sending for approval to approving. "
+        url="https://dynamic-table-xi.vercel.app/"
+        badge="NEW"
+      />
+
+      <Card
+        title="Dashboard Fresh Order - Build and Buy Custom Tshirts "
+        img={proj4}
+        desc="This was a landing page plus website i built for a Tshirt and clothing compnay. on this website you can customize and order your own custom design tshirts. This also includes a custom Tshirt Builder Built using konva."
+        url="https://freshorder.web.app"
+        badge=""
+      />
+    </div>
+  </div>
+
+  <input
+    type="radio"
+    name="my_tabs_2"
+    role="tab"
+    class="tab"
+    aria-label="Mobile"
+  />
+  <div
+    role="tabpanel"
+    class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+  >
+    <Card
+      video={srhM}
+      url="https://srh-agency.web.app"
+      orientation="vertical"
+    />
+  </div>
+
+  <input
+    type="radio"
+    name="my_tabs_2"
+    role="tab"
+    class="tab"
+    aria-label="Hardware"
+  />
+  <div
+    role="tabpanel"
+    class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+  >
+    Coming soon...
+  </div>
+</div>
