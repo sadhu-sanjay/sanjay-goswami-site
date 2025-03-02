@@ -5,13 +5,15 @@ import proj3 from "~/assets/images/project/proj3.png";
 import proj4 from "~/assets/images/project/proj4.png";
 import proj5 from "~/assets/images/project/proj5.png";
 
+import img1 from "~/assets/images/project/sweden.png"
+
 import video1 from "~/assets/videos/fluid.mp4";
 import video2 from "~/assets/videos/comp1.mp4";
 import video3 from "~/assets/videos/rally.mp4";
 import video4 from "~/assets/videos/airmaps.mp4";
 import video5 from "~/assets/videos/newBeginnings.mp4";
 import srh from "~/assets/videos/srh.mp4";
-import srhM from "~/assets/videos/srh-m.mp4";
+import srhM from "~/assets/vidbceos/srh-m.mp4";
 import medico from "~/assets/videos/medico.mp4";
 
 const { mdColCount, lgColCount} = Astro.props;
@@ -148,11 +150,6 @@ const { mdColCount, lgColCount} = Astro.props;
     role="tabpanel"
     class="tab-content bg-base-100 border-base-300 rounded-box p-6"
   >
-    <Card
-      video={srhM}
-      url="https://srh-agency.web.app"
-      orientation="vertical"
-    />
   </div>
 
   <input
@@ -160,12 +157,22 @@ const { mdColCount, lgColCount} = Astro.props;
     name="my_tabs_2"
     role="tab"
     class="tab"
-    aria-label="Hardware"
+    aria-label="GIS"
   />
   <div
     role="tabpanel"
     class="tab-content bg-base-100 border-base-300 rounded-box p-6"
   >
-    Coming soon...
+  <div
+  class={`grid grid-cols-1 ${mdColCount > 1 ? "md:grid-cols-2" : "md:grid-cols-1"} gap-12 ${lgColCount > 1 ? "lg:grid-cols-3" : "lg:grid-cols-1"} `}
+>
+
+    <Card
+      img={img1}
+      title="Sweden Dog Parks"
+      desc="see all the dog parks in a region of sweden. additionally search any area in on map to see the dog parks in that area"
+      url="https://sweden-dog-parks.web.app"
+    />
+</div>
   </div>
 </div>
