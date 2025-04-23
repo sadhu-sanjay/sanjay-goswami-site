@@ -4,8 +4,8 @@ import Card from "../components/Card.astro";
 import proj3 from "~/assets/images/project/proj3.png";
 import proj4 from "~/assets/images/project/proj4.png";
 import proj5 from "~/assets/images/project/proj5.png";
-
-import img1 from "~/assets/images/project/sweden.png"
+import img1 from "~/assets/images/project/sweden.png";
+import methane from "~/assets/images/project/methane.png";
 
 import video1 from "~/assets/videos/fluid.mp4";
 import video2 from "~/assets/videos/comp1.mp4";
@@ -16,7 +16,7 @@ import srh from "~/assets/videos/srh.mp4";
 import srhM from "~/assets/vidbceos/srh-m.mp4";
 import medico from "~/assets/videos/medico.mp4";
 
-const { mdColCount, lgColCount} = Astro.props;
+const { mdColCount, lgColCount } = Astro.props;
 ---
 
 <div role="tablist" class="tabs tabs-lg tabs-lifted">
@@ -25,9 +25,10 @@ const { mdColCount, lgColCount} = Astro.props;
     name="my_tabs_2"
     role="tab"
     class="tab"
-    aria-label="Frontend"
+    aria-label="Frontend "
     checked="checked"
   />
+
   <div
     role="tabpanel"
     class="tab-content bg-base-100 border-base-300 rounded-box p-6"
@@ -71,7 +72,6 @@ const { mdColCount, lgColCount} = Astro.props;
         tags={["React", "Tailwind", "Next.js"]}
       />
 
-
       <Card
         title="Relaunch of our mission"
         video={video5}
@@ -79,7 +79,6 @@ const { mdColCount, lgColCount} = Astro.props;
         url="https://new-beginnings.web.app"
         badge=""
       />
-
 
       <Card
         title="ArcadeVr - Arcade Software for VR Game Management Software."
@@ -144,35 +143,43 @@ const { mdColCount, lgColCount} = Astro.props;
     name="my_tabs_2"
     role="tab"
     class="tab"
-    aria-label="Mobile"
-  />
-  <div
-    role="tabpanel"
-    class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-  >
-  </div>
-
-  <input
-    type="radio"
-    name="my_tabs_2"
-    role="tab"
-    class="tab"
     aria-label="GIS"
   />
   <div
     role="tabpanel"
     class="tab-content bg-base-100 border-base-300 rounded-box p-6"
   >
-  <div
-  class={`grid grid-cols-1 ${mdColCount > 1 ? "md:grid-cols-2" : "md:grid-cols-1"} gap-12 ${lgColCount > 1 ? "lg:grid-cols-3" : "lg:grid-cols-1"} `}
->
+    <div
+      class={`grid grid-cols-1 ${mdColCount > 1 ? "md:grid-cols-2" : "md:grid-cols-1"} gap-12 ${lgColCount > 1 ? "lg:grid-cols-3" : "lg:grid-cols-1"} `}
+    >
+      <Card
+        img={img1}
+        title="Sweden Dog Parks"
+        desc="see all the dog parks in a region of sweden. additionally search any area in on map to see the dog parks in that area"
+        url="https://sweden-dog-parks.web.app"
+      />
 
-    <Card
-      img={img1}
-      title="Sweden Dog Parks"
-      desc="see all the dog parks in a region of sweden. additionally search any area in on map to see the dog parks in that area"
-      url="https://sweden-dog-parks.web.app"
-    />
-</div>
+      <Card
+        img={methane}
+        title="Methane Risk Assessment"
+        desc="A web app that helps you visualize the methane wells in united states and their risk assessment"
+        url="https://sweden-dog-parks.web.app"
+        url="https://methane-risk-mapping.web.app/"
+      />
+    </div>
   </div>
+
+  <!-- <input
+    type="radio"
+    name="my_tabs_2"
+    role="tab"
+    class="tab"
+    aria-label="Mobile"
+  />
+  <div
+    role="tabpanel"
+    class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+  >
+  </div> -->
+
 </div>
