@@ -16,6 +16,7 @@ import video6 from "~/assets/videos/airdome.mp4";
 import srh from "~/assets/videos/srh.mp4";
 import srhM from "~/assets/vidbceos/srh-m.mp4";
 import medico from "~/assets/videos/medico.mp4";
+import propertyElevation from "~/assets/videos/propertyElevation.mp4";
 
 const { mdColCount, lgColCount } = Astro.props;
 ---
@@ -26,8 +27,64 @@ const { mdColCount, lgColCount } = Astro.props;
     name="my_tabs_2"
     role="tab"
     class="tab"
-    aria-label="Frontend "
+    aria-label="GIS"
     checked="checked"
+  />
+  <div
+    role="tabpanel"
+    class="tab-content bg-base-100 border-base-300 rounded-box p-6"
+  >
+    <div
+      class={`grid grid-cols-1 ${mdColCount > 1 ? "md:grid-cols-2" : "md:grid-cols-1"} gap-12 ${lgColCount > 1 ? "lg:grid-cols-3" : "lg:grid-cols-1"} `}
+    >
+      
+      <Card
+        title="Airmaps - Google Maps Records Visualization"
+        video={video4}
+        desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
+        url="https://travel.lbd.ventures"
+        badge="NEW"
+      />
+      
+      <Card
+        title="Elevation data overlay - property survey map overlayed with elevation data at every 2feet "
+        video={propertyElevation}
+        desc="Client provided a property/parcel survey which needed overlaying elevation data extracted for govt radar survey data aligned with the building survey to help with Architect requirements"
+        url="https://travel.lbd.ventures"
+        badge="NEW"
+      />
+
+      <Card
+        title="Airdome - Visualize your 3d Building model in 3d Google Maps"
+        video={video6}
+        desc="Airdome lets you visualize your 3d Building models in google maps. just import your 3d buildings model and scale and place it where ever you like in the world"
+        url="https://airdome.web.app/"
+        badge=""
+      />
+
+      <Card
+        img={img1}
+        title="Sweden Dog Parks"
+        desc="see all the dog parks in a region of sweden. additionally search any area in on map to see the dog parks in that area"
+        url="https://sweden-dog-parks.web.app"
+      />
+
+      <Card
+        img={methane}
+        title="Methane Risk Assessment"
+        desc="A web app that helps you visualize the methane wells in united states and their risk assessment"
+        url="https://sweden-dog-parks.web.app"
+        url="https://methane-risk-mapping.web.app/"
+      />
+    </div>
+  </div>
+
+  <input
+    type="radio"
+    name="my_tabs_2"
+    role="tab"
+    class="tab"
+    aria-label="Frontend "
   />
 
   <div
@@ -114,22 +171,6 @@ const { mdColCount, lgColCount } = Astro.props;
       class={`grid grid-cols-1 ${mdColCount > 1 ? "md:grid-cols-2" : "md:grid-cols-1"} gap-12 ${lgColCount > 1 ? "lg:grid-cols-3" : "lg:grid-cols-1"} `}
     >
       <Card
-        title="Airmaps - Google Maps Records Visualization"
-        video={video4}
-        desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
-        url="https://travel.lbd.ventures"
-        badge="NEW"
-      />
-
-     <Card
-        title="Airdome - Visualize your 3d Building model in 3d Google Maps"
-        video={video6}
-        desc="Airdome lets you visualize your 3d Building models in google maps. just import your 3d buildings model and scale and place it where ever you like in the world"
-        url="https://airdome.web.app/"
-        badge="NEW"
-      />
-
-      <Card
         title="Itne Incorporated Business Dashboard"
         img={proj3}
         desc="A Custom Dashboard and saas work demo for Itne Inc. showcasing all Features that can be implemented on a fullstack app. From listing to creating to sending for approval to approving. "
@@ -143,37 +184,6 @@ const { mdColCount, lgColCount } = Astro.props;
         desc="This was a landing page plus website i built for a Tshirt and clothing compnay. on this website you can customize and order your own custom design tshirts. This also includes a custom Tshirt Builder Built using konva."
         url="https://freshorder.web.app"
         badge=""
-      />
-    </div>
-  </div>
-
-  <input
-    type="radio"
-    name="my_tabs_2"
-    role="tab"
-    class="tab"
-    aria-label="GIS"
-  />
-  <div
-    role="tabpanel"
-    class="tab-content bg-base-100 border-base-300 rounded-box p-6"
-  >
-    <div
-      class={`grid grid-cols-1 ${mdColCount > 1 ? "md:grid-cols-2" : "md:grid-cols-1"} gap-12 ${lgColCount > 1 ? "lg:grid-cols-3" : "lg:grid-cols-1"} `}
-    >
-      <Card
-        img={img1}
-        title="Sweden Dog Parks"
-        desc="see all the dog parks in a region of sweden. additionally search any area in on map to see the dog parks in that area"
-        url="https://sweden-dog-parks.web.app"
-      />
-
-      <Card
-        img={methane}
-        title="Methane Risk Assessment"
-        desc="A web app that helps you visualize the methane wells in united states and their risk assessment"
-        url="https://sweden-dog-parks.web.app"
-        url="https://methane-risk-mapping.web.app/"
       />
     </div>
   </div>
