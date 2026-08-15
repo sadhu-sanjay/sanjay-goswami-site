@@ -17,6 +17,7 @@ import srh from "~/assets/videos/srh.mp4";
 import srhM from "~/assets/vidbceos/srh-m.mp4";
 import medico from "~/assets/videos/medico.mp4";
 import propertyElevation from "~/assets/videos/propertyElevation.mp4";
+import meridian from "~/assets/videos/meridian.mp4";
 
 const { mdColCount, lgColCount } = Astro.props;
 ---
@@ -39,6 +40,15 @@ const { mdColCount, lgColCount } = Astro.props;
     >
       
       <Card
+        title=" Meridian | Land Intelligence - Find prime land before everyone else.. "
+        video={meridian}
+        desc="Built an intuitive user interface that leverages 12 distinct data points to help users discover prime real estate and provides automated investment ratings for streamlined decision-making."
+        url="https://meridian--shicane.us-east4.hosted.app/"
+        badge="NEW"
+        tags={["Next JS", "PostgreSQL", "ArcGIS"]}
+      />
+      
+      <Card
         title="Lidar Elevation data overlay on a property survey map "
         video={propertyElevation}
         desc="Client survey parcel survey which needed overlaying elevation data extracted for govt radar survey data aligned with the building survey to help with Architect requirements"
@@ -51,7 +61,7 @@ const { mdColCount, lgColCount } = Astro.props;
         video={video4}
         desc="Airtable records visualization Using Custom Google maps. The maps data Gets updated everyday with the latest data from Airtable"
         url="https://travel.lbd.ventures"
-        badge="NEW"
+        badge=""
       />
       <Card
         title="Airdome - Visualize your 3d Building model in 3d Google Maps"
