@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npm run build && rsync -avz '-e ssh -i ~/keys/aws-test-server.pem' dist ubuntu@3.7.72.9:/var/www/portfolio && ssh -i ~/keys/aws-test-server.pem ubuntu@3.7.72.9 'sudo systemctl restart nginx'"
+    "deploy": " npm run build | npx firebase-tools deploy --only hosting"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.3",
