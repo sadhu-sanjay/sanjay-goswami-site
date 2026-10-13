@@ -18,6 +18,7 @@ import srhM from "~/assets/vidbceos/srh-m.mp4";
 import medico from "~/assets/videos/medico.mp4";
 import propertyElevation from "~/assets/videos/propertyElevation.mp4";
 import meridian from "~/assets/videos/meridian.mp4";
+import grainbin from "~/assets/videos/grainbin.mp4";
 
 const { mdColCount, lgColCount } = Astro.props;
 ---
@@ -46,6 +47,15 @@ const { mdColCount, lgColCount } = Astro.props;
         url="https://meridian--shicane.us-east4.hosted.app/"
         badge="NEW"
         tags={["Next JS", "PostgreSQL", "ArcGIS"]}
+      />
+
+      <Card
+        title="Grain Bin AI: Grain storage site detection on satellite imagery"
+        video={grainbin}
+        desc="Full-stack and computer vision development for a lead-generation tool that finds grain storage bins across the US. Users select a county to start a live scan: building footprints locate farmsteads, DBSCAN clusters them, NAIP aerial imagery is fetched through Google Earth Engine, and a custom RF-DETR model trained on Roboflow detects bins. Results appear as georeferenced boxes on a satellite map. Piloted in Kansas, North Dakota, and Arkansas; scans stop after finding 10 bins."
+        url="https://grain-bin-ai--shicane.us-central1.hosted.app"
+        badge="NEW"
+        tags={["Computer Vision", "Google Earth", "Next.js", "Geospatial Data", "Object Detection"]}
       />
       
       <Card
